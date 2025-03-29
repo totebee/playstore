@@ -1,1 +1,370 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grove Tools - Frequently Asked Questions</title>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --accent-color: #81C784;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-bg);
+        }
+        
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .logo-container {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            box-shadow: var(--shadow);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(76, 175, 80, 0.05);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        .contact-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .contact-email {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 1rem 0;
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .contact-email:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">G</div>
+        </div>
+        <h1>Grove Tools</h1>
+        <p>Premium Mobile Applications</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#apps">Our Apps</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2 class="page-title" id="faq">Frequently Asked Questions</h2>
+        
+        <div class="faq-section">
+            <h3 class="section-title">General Questions</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">How can I download your apps?</div>
+                <div class="faq-answer">
+                    <p>All our applications are available on the Google Play Store. Simply search for "Grove Tools" or the specific app name you're looking for, and you'll find our official apps. Make sure to check for our developer name to ensure you're downloading the authentic version.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Are your apps free to download?</div>
+                <div class="faq-answer">
+                    <p>We offer both free and premium applications. Our free apps may include in-app purchases or ads to support development, while our premium apps are ad-free and offer enhanced features. Details about pricing and available features are clearly listed on each app's Play Store page.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do your apps collect my personal data?</div>
+                <div class="faq-answer">
+                    <p>We take your privacy seriously. Our apps only collect data necessary for their functionality and to improve user experience. We never sell personal information to third parties. For detailed information, please refer to the Privacy Policy for each specific application, which can be found on its Google Play Store listing.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h3 class="section-title">Subscription & Payments</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I manage or cancel my subscription?</div>
+                <div class="faq-answer">
+                    <p>You can manage your subscriptions directly through the Google Play Store:</p>
+                    <ol>
+                        <li>Open the Google Play Store app</li>
+                        <li>Tap on your profile icon in the top right</li>
+                        <li>Select "Payments & subscriptions"</li>
+                        <li>Tap "Subscriptions"</li>
+                        <li>Find and select our app</li>
+                        <li>Choose "Cancel subscription" or manage your payment options</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Will I receive a refund if I cancel my subscription?</div>
+                <div class="faq-answer">
+                    <p>When you cancel a subscription, you'll continue to have access to the premium features until the end of your current billing period. Google Play Store generally doesn't provide partial refunds for canceled subscriptions. However, if you've experienced technical issues or believe you have grounds for a refund, please contact our support team at hi@grovetools.live with details of your situation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What payment methods do you accept?</div>
+                <div class="faq-answer">
+                    <p>We accept all payment methods supported by the Google Play Store, including credit/debit cards, Google Play balance, PayPal (in supported countries), and carrier billing (where available). Payment processing is handled securely by Google, and we never have access to your complete financial information.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-section">
+            <h3 class="section-title">Technical Support</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">My app is crashing or not working properly. What should I do?</div>
+                <div class="faq-answer">
+                    <p>If you're experiencing technical issues with any of our apps, please try these troubleshooting steps:</p>
+                    <ol>
+                        <li>Ensure your app is updated to the latest version</li>
+                        <li>Restart your device</li>
+                        <li>Check if your device meets the minimum requirements</li>
+                        <li>Clear the app cache (Settings > Apps > [App Name] > Storage > Clear Cache)</li>
+                        <li>If problems persist, please contact our support team with details about your device model, Android version, and a description of the issue</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I transfer my app data to a new device?</div>
+                <div class="faq-answer">
+                    <p>Most of our apps synchronize data through your Google account. To ensure your data transfers to a new device:</p>
+                    <ol>
+                        <li>Make sure you're using the same Google account on both devices</li>
+                        <li>Enable backup in your app settings (if available)</li>
+                        <li>On your new device, install the app and sign in with the same Google account</li>
+                        <li>Allow the app to restore backed-up data when prompted</li>
+                    </ol>
+                    <p>For apps that don't support automatic backup, please check the specific app's settings for export/import options or contact our support team for assistance.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do your apps work offline?</div>
+                <div class="faq-answer">
+                    <p>Many of our apps offer offline functionality, allowing you to use core features without an internet connection. However, certain features like cloud sync, online content, or real-time data may require an active internet connection. Each app's description on the Play Store specifies its offline capabilities.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section" id="support">
+            <h3>Still have questions?</h3>
+            <p>Our support team is here to help! Feel free to reach out to us with any questions or concerns.</p>
+            <a href="mailto:hi@grovetools.live" class="contact-email">hi@grovetools.live</a>
+            <p>We aim to respond to all inquiries within 24-48 business hours.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="logo">Grove Tools</div>
+        <p>Creating innovative solutions for mobile users worldwide</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p>&copy; 2025 Grove Tools. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript for FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.faq-question');
+            
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // Toggle active class on question
+                    this.classList.toggle('active');
+                    
+                    // Toggle active class on answer
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
